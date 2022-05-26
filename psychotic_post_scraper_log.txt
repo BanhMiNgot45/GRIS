@@ -1,0 +1,5 @@
+Number of total posts: 2420
+Number of comments: 1152
+Number of submissions: 1268
+Mean length of posts: 158.31198347107437
+Standard deviation of post lengths: 153.80790628223
