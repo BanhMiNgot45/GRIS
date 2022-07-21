@@ -59,12 +59,12 @@ for author in authors.keys():
             l.append(d)
     posts[author] = l
 
-with open("psychotic_post_scraper_log.txt", "w") as l:
+with open("../logs/psychotic_post_scraper_log.txt", "w") as l:
     l.write("Number of total posts: " + str(num_posts) + "\n")
     l.write("Number of comments: " + str(num_comments) + "\n")
     l.write("Number of submissions: " + str(num_submissions) + "\n")
     l.write("Mean length of posts: " + str(sum(lengths) / len(lengths)) + "\n")
     l.write("Standard deviation of post lengths: " + str(statistics.stdev(lengths)) + "\n")
 
-with open("psychotic_posts.pickle", "wb") as p:
+with open("../data/psychotic_posts.pickle", "wb") as p:
     pickle.dump(posts, p)

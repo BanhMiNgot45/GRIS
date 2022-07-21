@@ -27,11 +27,11 @@ json_data = make_request("https://api.pushshift.io/reddit/submission/search/?siz
 for data in json_data["data"]:
     authors.append(data["author"])
 
-with open("random_author_scraper_log.txt", "w") as l:
+with open("../logs/random_author_scraper_log.txt", "w") as l:
     l.write("Number of authors: " + str(len(authors)) + "\n")
     l.write("-----------------------------------------------------\n")
     for a in authors:
         l.write(a + "\n")
 
-with open("random_authors.pickle", "wb") as p:
+with open("../data/random_authors.pickle", "wb") as p:
     pickle.dump(authors, p)

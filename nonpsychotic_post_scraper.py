@@ -34,7 +34,7 @@ num_posts = 0
 num_submissions = 0
 num_comments = 0
 
-with open("random_authors.pickle", "rb") as p:
+with open("../data/random_authors.pickle", "rb") as p:
     authors = pickle.load(p)
 
 for author in authors:
@@ -59,7 +59,7 @@ for author in authors:
             l.append(d)
     posts[author] = l
 
-with open("nonpsychotic_post_scraper_log.txt", "w") as l:
+with open("../logs/nonpsychotic_post_scraper_log.txt", "w") as l:
     l.write("Number of total posts: " + str(num_posts) + "\n")
     l.write("Number of comments: " + str(num_comments) + "\n")
     l.write("Number of submissions: " + str(num_submissions) + "\n")

@@ -45,7 +45,7 @@ for t in range(0, 1950, 50):
         if data["author_flair_text"] in user_flairs:
             authors[data["author"]] = data["author_flair_text"]
 
-log = open("author_scraper_log.txt", "w")
+log = open("../logs/author_scraper_log.txt", "w")
 log.write("Number of unique authors: " + str(len(authors)) + "\n")
 log.write("-----------------------------------------------------\n")
 flairs = {}
@@ -60,5 +60,5 @@ for k, v in flairs.items():
     log.write(k + " " + str(v) + "\n")
 log.close()
 
-with open("authors.pickle", "wb") as p:
+with open("../data/authors.pickle", "wb") as p:
     pickle.dump(authors, p)
