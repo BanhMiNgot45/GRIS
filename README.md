@@ -11,17 +11,17 @@ GRIS is a research project for my undergraduate honor's thesis at the School of 
 ## Steps
 
 ### Data Wrangling
-To get textual data from people with schizophrenia, I used the PushShift API to query posts from the subreddit r/schizophrenia. I then got a list of authors and their user flair based on the posts from the subreddit. To ensure I was only using authors that had schizophrenia, I checked if their user flair indicated they had a diagnosis of schizophrenia and kept the authors that had those user flairs. After that, I queried a list of posts written by each schizophrenic author that span multiple subreddits. My reasoning for this is to ensure the textual data is diverse in content instead of only focusing on the topic of schizophrenia. I then filtered out posts that were less than 50 tokens long and put the posts in a list matched to each author in a mapping.
+To get textual data from people with schizophrenia, I used the PushShift API to query posts from the subreddit r/schizophrenia. I then got a list of authors and their user flair based on the posts from the subreddit. To ensure I was only using authors that had schizophrenia, I checked if their user flair indicated they had a diagnosis of schizophrenia spectrum disorder and kept the authors that had those user flairs. After that, I queried a list of posts written by each psychotic author that span multiple subreddits. My reasoning for this is to ensure the textual data is diverse in content instead of only focusing on the topic of psychosiss. I then filtered out posts that were less than 50 tokens long and put the posts in a list matched to each author in a mapping.
 
-To get textual data from a non-psychotic population, I queried all Reddit posts within a timeline using the PushShift API. I then got a list of authors who written those posts and excluded those authors that were already in the schizophrenia population. After that, I got a list of posts that were more than 50 tokens long made by each author.
+To get textual data from a non-psychotic population, I queried all Reddit posts within a timeline using the PushShift API. I then got a list of authors who written those posts and excluded those authors that were already in the schizophrenia population. After that, I got a list of posts that were more than 50 tokens long made by each author and mapped them to the username of the author.
 
 ## Data Format
 
 ### data/author.pickle
-A Python dictionary where the key is the schizophrenic author's username and the value is the author's user flair.
+A Python dictionary where the key is the psychotic author's username and the value is the author's user flair.
 
 ### data/psychotic_posts.pickle
-A Python dictionary where the key is the schizophrenic author's username and the value is a list of posts they made that are more then 50 tokens long.
+A Python dictionary where the key is the psychotic author's username and the value is a list of posts they made that are more then 50 tokens long.
 
 ### data/random_authors.pickle
 A Python list of non-psychotic authors' usernames.
