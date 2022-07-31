@@ -21,10 +21,10 @@ To get textual data from a non-psychotic population, I queried all Reddit posts 
 A Python dictionary where the key is the psychotic author's username and the value is the author's user flair.
 
 ### data/psychotic_posts.pickle
-A Python dictionary where the key is the psychotic author's username and the value is a list of posts they made that are more then 50 tokens long.
+A Python dictionary where the key is the psychotic author's username and the value is a list of dictionaries with the key/value pairs being the subreddit of a post, the textual content of the post, and the length of the post.
 
 ### data/random_authors.pickle
 A Python list of non-psychotic authors' usernames.
 
 ### data/nonpsychotic_posts.pickle
-A Python dictionary where the key is the non-psychotic author's username and the value is a list of posts they made that are more than 50 tokens long.
+A Python dictionary where the key is the non-psychotic author's username and the value is a list of dictionaries with the key/value pairs being the subreddit of a post, the textual content of the post, and the length of the post.
